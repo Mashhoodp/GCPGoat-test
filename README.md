@@ -59,22 +59,18 @@ Manually installing GCPGoat would require you to follow these steps:
 
 **Step 1.** Clone the repo
 ```sh
-git clone https://github.com/ine-labs/GCPGoat
+git clone https://github.com/Mashhoodp/GCPGoat-test
 ```
 
-**Step 2.** Configure the GCP User Account Credentials using gcloud CLI
+**Step 2.** Enable the api given below
 ```sh
-gcloud auth application-default login
-```
-**Step 3.** Insert the Billing Account name in main.tf file
-
-```hcl
-data "google_billing_account" "acct" {
-  display_name = "<Your Billing Account Name>"
-}
+cloud resource manager api
+cloud billing api
+cloud build api 
+app engine admin api
 ```
 
-**Step 4.** In the same working directory use terraform to deploy GCPGoat.
+**Step 3.** In the same working directory use terraform to deploy GCPGoat.
 
 ```sh
 terraform init
